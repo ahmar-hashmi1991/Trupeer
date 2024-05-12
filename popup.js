@@ -46,7 +46,4 @@ async function saveToFile() {
       filename: "clicks.txt",
     });
   });
-  chrome.storage.local.set({ "clicks": [] }).then(() => {
-    console.log("Value is set");
-  });
 }
