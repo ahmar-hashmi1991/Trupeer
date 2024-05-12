@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Screen and Click Recorder",
+  "version": "1.0",
+  "description": "Records mouse clicks and screen activity on webpages.",
+  "permissions": ["activeTab", "storage", "desktopCapture", "downloads", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
